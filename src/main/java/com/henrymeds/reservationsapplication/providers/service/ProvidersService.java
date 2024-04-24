@@ -88,7 +88,7 @@ public class ProvidersService {
 
     public List<ProviderAvailabilityDTO> getProvidersAvailability(Long providerId) {
 
-        val providerAvailabilities = providerAvailabilityRepository.findByProviderId(providerId);
+        val providerAvailabilities = providerAvailabilityRepository.findByProviderIdAndConfirmed(providerId, false);
 
         // Transform entities into DTO objects using Java streams and map operation
         List<ProviderAvailabilityDTO> providerAvailabilityDTOS = providerAvailabilities.stream()

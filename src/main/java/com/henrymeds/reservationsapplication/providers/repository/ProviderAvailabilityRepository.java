@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface ProviderAvailabilityRepository extends CrudRepository<ProviderAvailabilityEntity, Long> {
 
-    List<ProviderAvailabilityEntity> findByProviderId(Long providerId);
+    List<ProviderAvailabilityEntity> findByProviderIdAndConfirmed(Long providerId, boolean confirmed);
 
 
 }
